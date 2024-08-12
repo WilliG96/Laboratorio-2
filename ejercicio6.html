@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio #6</title>
+</head>
+<body>
+    <h1>
+        Escribe una función que genere (N) números aleatorios únicos dentro de un rango dado
+    </h1>
+    
+    <script>
+
+    function nNumerosAleatorios(n, min, max) {
+    const numeros = new Set();
+    
+    while (numeros.size < n) {
+        const numeroAleatorio = Math.floor(Math.random() * (max - min + 1)) + min;
+        numeros.add(numeroAleatorio);
+    }
+    
+    return [...numeros];
+    }
+
+   console.log("Los numeros obtenidos son: ",nNumerosAleatorios(5, 1, 10));
+   console.log("Los numeros obtenidos son: ",nNumerosAleatorios(10, 10, 50));
+   console.log("Los numeros obtenidos son: ",nNumerosAleatorios(3, 1, 15));
+   console.log("Los numeros obtenidos son: ",nNumerosAleatorios(8, 5, 25));
+
+    </script>
+</body>
+</html>

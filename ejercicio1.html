@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <style>
+        h1{
+            color: rgb(255, 0, 0);
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            font-weight: bold;
+        }
+        h2{
+            color: blue;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .fondo{
+            position: absolute;
+            background: linear-gradient(#a619f8, #00f2fe);
+            height: 100vh;
+            width: 250vh;
+            margin: 0;
+        }
+
+    </style>
+    <div class="fondo">
+    <h1>Escribe un bucle que imprima los números del 1 al 100, pero que imprima "Fizz" para los múltiplos de 3 </h1>
+    <h2>"Buzz" para los múltiplos de 5, y "FizzBuzz" para los múltiplos de ambos.</h2>
+    <script>
+    for (let i = 1; i <= 100; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("FizzBuzz");
+        } else if (i % 3 === 0) {
+            console.log("Fizz");
+        } else if (i % 5 === 0) {
+            console.log("Buzz");
+        } else {
+            console.log(i);
+        }
+    }
+</script>
+</div>
+</body>
+</html>

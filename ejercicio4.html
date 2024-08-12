@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio #4</title>
+</head>
+<body>
+    <h1>
+        Crea una función que cuente el número de vocales en una cadena dada.
+    </h1>
+
+    <script>
+
+    function sumarVocales(cadena) {
+    const vocales = "aeiouAEIOU";
+    let conteo = 0;
+    
+    for (let char of cadena) {
+        if (vocales.includes(char)) {
+            conteo++;
+        }
+    }
+    
+    return conteo;
+    }
+
+    console.log("total de vocales de la frase", sumarVocales("Hola soy Willi Garcia"));
+    console.log("total de vocales de la frase", sumarVocales("Contemo las vocales de las frases"));
+    console.log("total de vocales de la frase", sumarVocales("para identificar el total."));
+
+    </script>
+</body>
+</html>

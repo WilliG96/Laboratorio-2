@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 Palindromo</title>
+</head>
+<body>
+
+    <h1>Determinar si una Frase es Palindromo</h1>
+
+    <input type="text" id="Oracion" placeholder="Ingresa la frase">
+    <button onclick="ImprimirPantalla()">Ver Respuesta</button>
+    <p id="respuesta"></p>
+
+    <script>
+        function Palindromo(cadena) {
+            let frase = cadena.toLowerCase().replace(/[^a-z0-9]/g, '');
+            return frase == [...frase].reverse().join('');
+        }
+
+        function ImprimirPantalla() {
+            const frase = document.getElementById('Oracion').value;
+            const respuesta = Palindromo(frase) ? "Si es Palíndromo" : "No es palíndromo";
+            document.getElementById('respuesta').textContent = respuesta;
+        }
+
+    </script>
+</body>
+</html>
